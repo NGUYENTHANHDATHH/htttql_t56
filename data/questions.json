@@ -1,88 +1,295 @@
 {
   "KhoiDong": [
     {
-      "question": "What is the capital of Vietnam?",
-      "options": [
-      "A. Không thể phục vụ khách hàng trên phạm vi toàn cầu.",
-      "B. Chỉ hoạt động trong giờ hành chính và khó quản lý.",
-      "C. Chi phí thuê mặt bằng ảo rất cao.",
-      "D. Yêu cầu chi phí công nghệ ban đầu cao và khách hàng không thể trải nghiệm sản phẩm trực tiếp."
-    ]
+      "question": "Ba chức năng chính của logistics trong thương mại điện tử là gì?",
+      "options": []
     },
     {
-      "question": "What is 2 + 2?",
+      "question": "Báo cáo chỉ ra thách thức nào liên quan đến nguồn nhân lực cho thương mại điện tử tại Việt Nam?",
       "options": [
-      "A. Không thể phục vụ khách hàng trên phạm vi toàn cầu.",
-      "B. Chỉ hoạt động trong giờ hành chính và khó quản lý.",
-      "C. Chi phí thuê mặt bằng ảo rất cao.",
-      "D. Yêu cầu chi phí công nghệ ban đầu cao và khách hàng không thể trải nghiệm sản phẩm trực tiếp."
-    ]
+        "A. Nhân lực chỉ cần giỏi về kinh doanh, không cần kiến thức công nghệ.",
+        "B. Nguồn nhân lực nhìn chung vẫn còn thiếu về số lượng và yếu về chất lượng chuyên môn.",
+        "C. Thời gian đào tạo nhân lực cho TMĐT rất ngắn và đơn giản.",
+        "D. Nguồn nhân lực dồi dào và có trình độ chuyên môn cao."
+      ]
     },
     {
-      "question": "In what year did Vietnam declare independence?",
+      "question": "Báo cáo đã chỉ ra hạn chế lớn nhất của mô hình \"cửa hàng ảo\" (virtual store) là gì?",
       "options": [
-      "A. Không thể phục vụ khách hàng trên phạm vi toàn cầu.",
-      "B. Chỉ hoạt động trong giờ hành chính và khó quản lý.",
-      "C. Chi phí thuê mặt bằng ảo rất cao.",
-      "D. Yêu cầu chi phí công nghệ ban đầu cao và khách hàng không thể trải nghiệm sản phẩm trực tiếp."
-    ]
+        "A. Không thể phục vụ khách hàng trên phạm vi toàn cầu.",
+        "B. Chỉ hoạt động trong giờ hành chính và khó quản lý.",
+        "C. Chi phí thuê mặt bằng ảo rất cao.",
+        "D. Yêu cầu chi phí công nghệ ban đầu cao và khách hàng không thể trải nghiệm sản phẩm trực tiếp."
+      ]
     },
     {
-      "question": "Who was the first president of the United States?",
-      "options": [
-      "A. Không thể phục vụ khách hàng trên phạm vi toàn cầu.",
-      "B. Chỉ hoạt động trong giờ hành chính và khó quản lý.",
-      "C. Chi phí thuê mặt bằng ảo rất cao.",
-      "D. Yêu cầu chi phí công nghệ ban đầu cao và khách hàng không thể trải nghiệm sản phẩm trực tiếp."
-    ]
+      "question": "Chữ ký số được xác minh là hợp lệ khi nào?",
+      "options": []
     },
     {
-      "question": "What is the chemical symbol for water?",
+      "question": "Chức năng bảo mật nào của chữ ký số đảm bảo thông điệp do đúng chủ thể gửi đi?",
+      "options": []
+    },
+    {
+      "question": "Chức năng bảo mật nào của chữ ký số giúp phát hiện mọi thay đổi trong văn bản?",
+      "options": []
+    },
+    {
+      "question": "Chức năng bảo mật nào của chữ ký số khiến người ký không thể phủ nhận việc đã ký vào văn bản?",
+      "options": []
+    },
+    {
+      "question": "Đâu là một trong những lợi ích chính của thương mại điện tử đối với doanh nghiệp khi so sánh với mô hình kinh doanh truyền thống?",
       "options": [
-      "A. Không thể phục vụ khách hàng trên phạm vi toàn cầu.",
-      "B. Chỉ hoạt động trong giờ hành chính và khó quản lý.",
-      "C. Chi phí thuê mặt bằng ảo rất cao.",
-      "D. Yêu cầu chi phí công nghệ ban đầu cao và khách hàng không thể trải nghiệm sản phẩm trực tiếp."
-    ]
+        "A. Tăng đáng kể chi phí quảng cáo và tiếp thị.",
+        "B. Giới hạn tệp khách hàng trong một khu vực địa lý nhất định.",
+        "C. Tối ưu hóa chi phí vận hành nhờ giảm thiểu chi phí mặt bằng và nhân sự.",
+        "D. Bắt buộc phải xây dựng nhiều cửa hàng vật lý để hỗ trợ."
+      ]
+    },
+    {
+      "question": "Để TMĐT thành công, báo cáo nhấn mạnh cần đảm bảo mấy yếu tố cốt lõi?",
+      "options": []
+    },
+    {
+      "question": "Đối với các sản phẩm số hóa (phim, nhạc, phần mềm), lợi ích nổi bật của thương mại điện tử là gì?",
+      "options": []
+    },
+    {
+      "question": "Đối với người tiêu dùng, lợi ích lớn nhất của thương mại điện tử về mặt thời gian và không gian là gì?",
+      "options": []
+    },
+    {
+      "question": "Giao thức bảo mật nào là tiêu chuẩn bắt buộc cho mọi website thương mại điện tử để bảo vệ thông điệp truyền tải?",
+      "options": []
+    },
+    {
+      "question": "Hình thức lừa đảo trực tuyến bằng cách gửi email giả mạo để lấy thông tin nhạy cảm của người dùng được gọi là gì?",
+      "options": []
+    },
+    {
+      "question": "Hoạt động đầu tiên trong chu trình thương mại điện tử là gì?",
+      "options": []
+    },
+    {
+      "question": "Hoạt động nào được coi là trung tâm của thương mại điện tử, bao gồm việc trưng bày, đàm phán và chốt đơn hàng?",
+      "options": []
+    },
+    {
+      "question": "Trong quy trình xác minh chữ ký số, người nhận sử dụng \"khóa công khai\" (public key) của người gửi để làm gì?",
+      "options": [
+        "A. Để tạo ra một bản tóm lược dữ liệu (message digest) mới từ văn bản nhận được.",
+        "B. Để mã hóa văn bản gốc nhằm tăng cường bảo mật.",
+        "C. Để giải mã chữ ký số và thu lại bản tóm lược dữ liệu ban đầu.",
+        "D. Để gửi lại một chữ ký xác nhận cho người gửi."
+      ]
+      
+    },
+    {
+      "question": "Hoạt động nào là cầu nối trực tiếp giữa doanh nghiệp và khách hàng, ảnh hưởng lớn đến trải nghiệm mua sắm?",
+      "options": []
+    },
+    {
+      "question": "Lợi ích nào của cửa hàng ảo giúp doanh nghiệp thu thập thông tin về lượt ghé thăm, sản phẩm được xem nhiều để điều chỉnh chiến lược?",
+      "options": []
+    },
+    {
+      "question": "Lợi ích nào của thương mại điện tử giúp doanh nghiệp vượt qua rào cản về vị trí địa lý?",
+      "options": []
+    },
+    {
+      "question": "Mô hình giao dịch TMĐT giữa các doanh nghiệp với nhau, thường có quy mô lớn và giá trị cao, được gọi là _____.",
+      "options": []
+    },
+    {
+      "question": "Mô hình giao dịch TMĐT trong đó doanh nghiệp bán hàng trực tuyến cho người tiêu dùng cuối cùng được gọi là gì?",
+      "options": []
+    },
+    {
+      "question": "Mô hình giao dịch trực tuyến giữa cá nhân với cơ quan nhà nước, nền tảng của chính phủ điện tử, được gọi là gì?",
+      "options": []
+    },
+    {
+      "question": "Mô hình thương mại điện tử B2C (Business to Customer) được mô tả trong báo cáo là gì?",
+      "options": [
+        "A. Giao dịch trực tuyến giữa các cá nhân với nhau, ví dụ như trên các chợ đồ cũ.",
+        "B. Giao dịch trong đó doanh nghiệp bán hàng hóa hoặc dịch vụ trực tiếp cho người tiêu dùng cuối cùng.",
+        "C. Giao dịch giữa các doanh nghiệp, chẳng hạn như nhà sản xuất bán hàng cho nhà phân phối.",
+        "D. Giao dịch giữa doanh nghiệp và các cơ quan chính phủ, như nộp thuế trực tuyến."
+      ]
+    },
+    {
+      "question": "Một trong những đặc trưng nổi bật của thương mại điện tử là khả năng hoạt động liên tục, được gọi là _____.",
+      "options": []
+    },
+    {
+      "question": "Một trong những hạn chế của thanh toán điện tử là sự phụ thuộc vào _____ ổn định và hệ thống máy chủ hoạt động liên tục.",
+      "options": []
+    },
+    {
+      "question": "Một trong những hạn chế lớn nhất của cửa hàng ảo là gì?",
+      "options": []
+    },
+    {
+      "question": "Một trong những lợi ích của thanh toán điện tử đối với ngân hàng và các tổ chức tài chính được đề cập là gì?",
+      "options": [
+        "A. Làm giảm mức độ cạnh tranh giữa các ngân hàng.",
+        "B. Gia tăng chi phí in ấn và quản lý tiền mặt.",
+        "C. Giảm chi phí vận hành nhờ tự động hóa và mở rộng phạm vi phục vụ khách hàng.",
+        "D. Hạn chế sự đa dạng của các sản phẩm và dịch vụ tài chính."
+      ]
+    },
+    {
+      "question": "Một trong những ưu điểm của cửa hàng ảo đối với doanh nghiệp là tiết kiệm chi phí do không cần _____.",
+      "options": []
+    },
+    {
+      "question": "Nền tảng của chữ ký điện tử gồm hai thành phần quan trọng nào?",
+      "options": []
+    },
+    {
+      "question": "Nguồn nhân lực cho ngành thương mại điện tử cần có kiến thức rộng trong những lĩnh vực nào?",
+      "options": []
+    },
+    {
+      "question": "So với cửa hàng ảo, rào cản chính khi kinh doanh trên sàn TMĐT như Shopee, Lazada là gì?",
+      "options": []
+    },
+    {
+      "question": "So với sàn TMĐT truyền thống, trải nghiệm tại cửa hàng ảo có đặc điểm gì khác biệt?",
+      "options": []
+    },
+    {
+      "question": "Tài liệu điện tử do tổ chức cung cấp dịch vụ chứng thực chữ ký số (CA) cấp, chứa thông tin của chủ thể và khóa công khai, được gọi là gì?",
+      "options": []
+    },
+    {
+      "question": "Tại sao trải nghiệm mua sắm trong cửa hàng ảo vẫn chưa thể thay thế hoàn toàn trải nghiệm thực tế?",
+      "options": []
+    },
+    {
+      "question": "Thanh toán điện tử giúp ngân hàng giảm chi phí vận hành thông qua việc _____ quy trình giao dịch.",
+      "options": []
+    },
+    {
+      "question": "Theo báo cáo, cơ chế hoạt động của chữ ký số kết hợp hai thành phần công nghệ nào để đảm bảo tính xác thực và toàn vẹn?",
+      "options": [
+        "A. Mật mã khóa công khai và hàm băm mật mã.",
+        "B. Trí tuệ nhân tạo (AI) và chuỗi khối (Blockchain).",
+        "C. Sinh trắc học và mã QR.",
+        "D. Giao thức HTTPS và tường lửa."
+      ]
+    },
+    {
+      "question": "Theo báo cáo, sự kiện nào được coi là khởi đầu cho quá trình hình thành và phát triển của thương mại điện tử tại Việt Nam?",
+      "options": [
+        "A. Luật Giao dịch Điện tử được ban hành.",
+        "B. Sự xuất hiện của Internet tại Việt Nam vào năm 1997.",
+        "C. Sự ra đời của các sàn thương mại điện tử lớn như Shopee, Lazada.",
+        "D. Đại dịch Covid-19 bùng phát trên toàn cầu."
+      ]
+    },
+    {
+      "question": "Theo báo cáo, vai trò của hoạt động logistics điện tử (e-logistics) trong thương mại điện tử là gì?",
+      "options": [
+        "A. Chỉ tập trung vào việc quảng bá sản phẩm trên các nền tảng số.",
+        "B. Là cầu nối trực tiếp giữa doanh nghiệp và khách hàng, bao gồm quản lý kho, xử lý đơn hàng và vận chuyển.",
+        "C. Xây dựng và duy trì trang web thương mại điện tử.",
+        "D. Giải quyết các vấn đề liên quan đến thanh toán điện tử và bảo mật giao dịch."
+      ]
+    },
+    {
+      "question": "Theo dự báo, thị trường thương mại điện tử Việt Nam sẽ vượt mốc bao nhiêu tỷ USD vào năm 2025?",
+      "options": []
+    },
+    {
+      "question": "Theo tài liệu, yếu tố nào KHÔNG được liệt kê là một trong những yếu tố cốt lõi đảm bảo thành công của thương mại điện tử?",
+      "options": [
+        "A. Cơ sở hạ tầng công nghệ và hệ thống thanh toán điện tử.",
+        "B. Quản lý logistics và nguồn nhân lực chất lượng cao.",
+        "C. Sự có mặt của nhiều cửa hàng bán lẻ vật lý.",
+        "D. An toàn bảo mật thông tin và môi trường pháp lý."
+      ]
+    },
+    {
+      "question": "Theo thống kê, ngành nào chiếm tỷ lệ các cuộc tấn công mạng cao nhất với 32,4%?",
+      "options": []
+    },
+    {
+      "question": "Trong hệ thống chữ ký số, khóa nào được chủ sở hữu giữ bí mật và dùng để tạo chữ ký?",
+      "options": []
+    },
+    {
+      "question": "Trong hệ thống chữ ký số, khóa nào được công bố rộng rãi và dùng để xác minh chữ ký?",
+      "options": []
+    },
+    {
+      "question": "Trong quá trình tạo chữ ký số, bản tóm lược dữ liệu (digest) được mã hóa bằng gì để tạo ra chữ ký số?",
+      "options": []
+    },
+    {
+      "question": "Trong quá trình tạo chữ ký số, bước đầu tiên là xử lý văn bản qua hàm băm để tạo ra một chuỗi giá trị gọi là _____.",
+      "options": []
+    },
+    {
+      "question": "Trong quá trình xác minh chữ ký số, người nhận dùng khóa nào để giải mã chữ ký số?",
+      "options": []
+    },
+    {
+      "question": "Trong thương mại điện tử, hệ thống nào đóng vai trò là mắt xích quan trọng kết nối đầu cuối trong chuỗi cung ứng?",
+      "options": []
+    },
+    {
+      "question": "Ưu điểm của cửa hàng ảo đối với khách hàng là cho phép 'thử' sản phẩm (quần áo, nội thất) thông qua công nghệ _____ trước khi mua.",
+      "options": []
+    },
+    {
+      "question": "Xu hướng thanh toán cho phép người dùng mua hàng trực tuyến và trả góp linh hoạt được gọi là gì?",
+      "options": []
+    },
+    {
+      "question": "Yếu tố nào trong cơ sở hạ tầng công nghệ giúp các giao dịch TMĐT diễn ra thông suốt, nhanh chóng?",
+      "options": []
     }
   ],
   "ChuongNgaiVat": {
     "img": "https://th.bing.com/th/id/R.2ac1b0f4d6af9c577b69101bfe727cbd?rik=Qc%2fP2qYcQ2%2b8vw&riu=http%3a%2f%2fstatic.cand.com.vn%2fFiles%2fImage%2fthuthuy%2f2021%2f02%2f01%2fthumb_660_d0db38ab-e08c-4711-981e-380ca3889561.jpg&ehk=vVdUKN6Z6r9udnjNBU2ZQ%2fPQ9qXS4WnBLfaiNXuapEY%3d&risl=&pid=ImgRaw&r=0",
-    "keyword": "INTERNET",
+    "keyword": "AN TOÀN THÔNG TIN",
     "clues": [
       {
-        "question": "What does 'www' stand for in a website address?",
-        "answer": "World Wide Web"
+        "question": "Công nghệ mã hóa phổ biến trong chữ ký số, sử dụng cặp khóa công khai và khóa bí mật để bảo mật dữ liệu.",
+        "answer": "RSA"
       },
       {
-        "question": "What does 'www' stand for in a website address?",
-        "answer": "World Wide Web"
+        "question": "Đây là giao thức chuẩn bắt buộc cho các website TMĐT, giúp mã hóa dữ liệu trao đổi giữa máy khách và máy chủ.",
+        "answer": "HTTPS"
       },
       {
-        "question": "What does 'www' stand for in a website address?",
-        "answer": "World Wide Web"
+        "question": "Kỹ thuật tạo ra một chuỗi giá trị cố định đại diện duy nhất cho dữ liệu, đảm bảo phát hiện mọi thay đổi.",
+        "answer": "Hàm băm"
       },
       {
-        "question": "What does 'www' stand for in a website address?",
-        "answer": "World Wide Web"
+        "question": "Loại chữ ký được pháp luật Việt Nam công nhận, giúp xác thực danh tính và đảm bảo tính toàn vẹn dữ liệu.",
+        "answer": "Chữ ký số"
       },
       {
-        "question": "What does 'www' stand for in a website address?",
-        "answer": "World Wide Web"
+        "question": "Phương thức xác thực hiện đại, yêu cầu ít nhất hai lớp bảo mật như mật khẩu + OTP hoặc vân tay.",
+        "answer": "MFA (Multi-Factor Authentication)"
       },
       {
-        "question": "Which company developed the Chrome browser?",
-        "answer": "Google"
+        "question": "Hình thức tấn công mạng phổ biến, kẻ xấu giả mạo email, website để đánh cắp thông tin cá nhân.",
+        "answer": "Phishing"
       },
       {
-        "question": "What is the name for a malicious software program designed to harm your computer?",
-        "answer": "Malware / Virus"
+        "question": "Hệ thống bảo vệ mạng nội bộ khỏi truy cập trái phép, được ví như “bức tường” chắn tin tặc.",
+        "answer": "Tường lửa"
       },
       {
-        "question": "What does 'IP' stand for in IP address?",
-        "answer": "Internet Protocol"
+        "question": "Loại phần mềm độc hại có thể lây lan qua email, cửa sổ chat, gây nguy hiểm cho hệ thống TMĐT.",
+        "answer": "Virus"
       }
     ]
+    
   },
   "TangToc": [
     {
@@ -101,25 +308,69 @@
   "VeDich": {
     "20p": [
       {
-        "question": "Who is the author of 'The Tale of Kieu'?"
+        "question": "Thương mại điện tử (eCommerce) là sự mua bán sản phẩm hay dịch vụ trên các hệ thống điện tử như __________ và các mạng máy tính"
       },
       {
-        "question": "What is the highest mountain in Vietnam?"
+        "question": "Trí tuệ nhân tạo (AI) đóng vai trò trung tâm trong quá trình chuyển đổi thương mại điện tử, đặc biệt đối với trải nghiệm và hành vi của đối tượng nào?"
       },
       {
-        "question": "What is the largest lake in Vietnam?"
-      }
-    ],
-    "30p": [
-      {
-        "question": "Which chemical element has the symbol 'O'?"
+        "question": "Để đảm bảo tính xác thực và chống phủ nhận trong giao dịch TMĐT, người ký sử dụng yếu tố nào để mã hóa bản tóm lược dữ liệu (digest)?"
       },
       {
-        "question": "What is the largest ocean in the world?"
+        "question": "Phân tích lợi ích chi phí, việc đầu tư vào hạ tầng máy móc nào sẽ thay thế đáng kể chi phí cao của việc thuê hoặc mua bất động sản cho cửa hàng vật lý?"
       },
       {
-        "question": "Who developed the theory of relativity?"
+        "question": "Mô hình không gian mua sắm số hóa được xây dựng bằng công nghệ thực tế ảo (VR), thực tế tăng cường (AR) hoặc 3D web interactive được gọi là gì?"
+      },
+      {
+        "question": "Trong thương mại điện tử, hệ thống nào đóng vai trò là mắt xích quan trọng kết nối đầu cuối trong chuỗi cung ứng?"
+      },
+      {
+        "question": "Ưu điểm của cửa hàng ảo đối với khách hàng là cho phép 'thử' sản phẩm (quần áo, nội thất) thông qua công nghệ _____ trước khi mua."
+      },
+      {
+        "question": "Xu hướng thanh toán cho phép người dùng mua hàng trực tuyến và trả góp linh hoạt được gọi là gì?"
+      },
+      {
+        "question": "Yếu tố nào trong cơ sở hạ tầng công nghệ giúp các giao dịch TMĐT diễn ra thông suốt, nhanh chóng?"
+      },
+      {
+        "question": "Logistics trong TMĐT đảm nhiệm việc vận chuyển, lưu kho và xử lý gì?"
+      },
+      {
+        "question": "Một trong những lợi ích lớn của mô hình TMĐT là giúp doanh nghiệp mở rộng _____ nhờ công cụ tìm kiếm toàn cầu."
       }
     ]
+    ,
+    "30p": [
+      {
+        "question": "Một trong những thách thức lớn của thương mại điện tử Việt Nam là nguồn nhân lực _____, hạ tầng kỹ thuật chưa đồng bộ và niềm tin người tiêu dùng chưa cao."
+      },
+      {
+        "question": "Làm thế nào thương mại điện tử giúp người tiêu dùng mua được sản phẩm với giá thấp hơn?"
+      },
+      {
+        "question": "Tiêu chuẩn Giao dịch Điện tử An toàn (SET) do hai tổ chức nào phối hợp ban hành?"
+      },
+      {
+        "question": "Tại Việt Nam, phương thức thanh toán qua thẻ nào chiếm ưu thế trong các giao dịch trực tuyến?"
+      },
+      {
+        "question": "Theo báo cáo ebi 2025, hơn 70% giao dịch TMĐT tại Việt Nam được thực hiện qua hai hình thức nào?"
+      },
+      {
+        "question": "Tập đoàn nào đã tạo ra siêu thị ảo tại ga tàu điện ngầm ở Hàn Quốc vào năm 2011, cho phép khách hàng quét mã QR để mua hàng?"
+      },
+      {
+        "question": "Một trong những hạn chế lớn nhất của cửa hàng ảo là gì?"
+      },
+      {
+        "question": "Lợi ích nào của cửa hàng ảo giúp doanh nghiệp thu thập thông tin về lượt ghé thăm, sản phẩm được xem nhiều để điều chỉnh chiến lược?"
+      },
+      {
+        "question": "Cửa hàng ảo mang lại ưu điểm về phân tích dữ liệu hành vi khách hàng, nhưng lại có nhược điểm lớn về chi phí ban đầu do yêu cầu loại hạ tầng nào?"
+      }
+    ]
+    
   }
 }

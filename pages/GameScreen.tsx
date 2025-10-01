@@ -156,7 +156,7 @@ const RoundDisplay: React.FC<{
       const data = questions.ChuongNgaiVat;
       return (
         <div className="text-center">
-          <h2 className="text-4xl font-bold mb-4 uppercase">Keyword has {data.keyword.length} letters</h2>
+          <h2 className="text-4xl font-bold mb-4 uppercase">Từ khóa cần tìm gồm 4 chữ</h2>
           <div className="relative mb-4">
     <img src={data.img} alt="Obstacle" className="w-full max-w-2xl mx-auto rounded-lg shadow-lg" />
     {/* 2x2 numbered black boxes overlay; hide each when its clue is revealed */}
