@@ -1,0 +1,125 @@
+{
+  "KhoiDong": [
+    {
+      "question": "What is the capital of Vietnam?",
+      "options": [
+      "A. Không thể phục vụ khách hàng trên phạm vi toàn cầu.",
+      "B. Chỉ hoạt động trong giờ hành chính và khó quản lý.",
+      "C. Chi phí thuê mặt bằng ảo rất cao.",
+      "D. Yêu cầu chi phí công nghệ ban đầu cao và khách hàng không thể trải nghiệm sản phẩm trực tiếp."
+    ]
+    },
+    {
+      "question": "What is 2 + 2?",
+      "options": [
+      "A. Không thể phục vụ khách hàng trên phạm vi toàn cầu.",
+      "B. Chỉ hoạt động trong giờ hành chính và khó quản lý.",
+      "C. Chi phí thuê mặt bằng ảo rất cao.",
+      "D. Yêu cầu chi phí công nghệ ban đầu cao và khách hàng không thể trải nghiệm sản phẩm trực tiếp."
+    ]
+    },
+    {
+      "question": "In what year did Vietnam declare independence?",
+      "options": [
+      "A. Không thể phục vụ khách hàng trên phạm vi toàn cầu.",
+      "B. Chỉ hoạt động trong giờ hành chính và khó quản lý.",
+      "C. Chi phí thuê mặt bằng ảo rất cao.",
+      "D. Yêu cầu chi phí công nghệ ban đầu cao và khách hàng không thể trải nghiệm sản phẩm trực tiếp."
+    ]
+    },
+    {
+      "question": "Who was the first president of the United States?",
+      "options": [
+      "A. Không thể phục vụ khách hàng trên phạm vi toàn cầu.",
+      "B. Chỉ hoạt động trong giờ hành chính và khó quản lý.",
+      "C. Chi phí thuê mặt bằng ảo rất cao.",
+      "D. Yêu cầu chi phí công nghệ ban đầu cao và khách hàng không thể trải nghiệm sản phẩm trực tiếp."
+    ]
+    },
+    {
+      "question": "What is the chemical symbol for water?",
+      "options": [
+      "A. Không thể phục vụ khách hàng trên phạm vi toàn cầu.",
+      "B. Chỉ hoạt động trong giờ hành chính và khó quản lý.",
+      "C. Chi phí thuê mặt bằng ảo rất cao.",
+      "D. Yêu cầu chi phí công nghệ ban đầu cao và khách hàng không thể trải nghiệm sản phẩm trực tiếp."
+    ]
+    }
+  ],
+  "ChuongNgaiVat": {
+    "img": "https://th.bing.com/th/id/R.2ac1b0f4d6af9c577b69101bfe727cbd?rik=Qc%2fP2qYcQ2%2b8vw&riu=http%3a%2f%2fstatic.cand.com.vn%2fFiles%2fImage%2fthuthuy%2f2021%2f02%2f01%2fthumb_660_d0db38ab-e08c-4711-981e-380ca3889561.jpg&ehk=vVdUKN6Z6r9udnjNBU2ZQ%2fPQ9qXS4WnBLfaiNXuapEY%3d&risl=&pid=ImgRaw&r=0",
+    "keyword": "INTERNET",
+    "clues": [
+      {
+        "question": "What does 'www' stand for in a website address?",
+        "answer": "World Wide Web"
+      },
+      {
+        "question": "What does 'www' stand for in a website address?",
+        "answer": "World Wide Web"
+      },
+      {
+        "question": "What does 'www' stand for in a website address?",
+        "answer": "World Wide Web"
+      },
+      {
+        "question": "What does 'www' stand for in a website address?",
+        "answer": "World Wide Web"
+      },
+      {
+        "question": "What does 'www' stand for in a website address?",
+        "answer": "World Wide Web"
+      },
+      {
+        "question": "Which company developed the Chrome browser?",
+        "answer": "Google"
+      },
+      {
+        "question": "What is the name for a malicious software program designed to harm your computer?",
+        "answer": "Malware / Virus"
+      },
+      {
+        "question": "What does 'IP' stand for in IP address?",
+        "answer": "Internet Protocol"
+      }
+    ]
+  },
+  "TangToc": [
+    {
+      "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    },
+    {
+      "video": "https://www.youtube.com/embed/3tmd-ClpJxA"
+    },
+    {
+      "video": "https://www.youtube.com/embed/VwBqBFb5w_w"
+    },
+    {
+      "video": "https://www.youtube.com/embed/kJQP7kiw5Fk"
+    }
+  ],
+  "VeDich": {
+    "20p": [
+      {
+        "question": "Who is the author of 'The Tale of Kieu'?"
+      },
+      {
+        "question": "What is the highest mountain in Vietnam?"
+      },
+      {
+        "question": "What is the largest lake in Vietnam?"
+      }
+    ],
+    "30p": [
+      {
+        "question": "Which chemical element has the symbol 'O'?"
+      },
+      {
+        "question": "What is the largest ocean in the world?"
+      },
+      {
+        "question": "Who developed the theory of relativity?"
+      }
+    ]
+  }
+}

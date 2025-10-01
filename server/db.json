@@ -1,0 +1,32 @@
+{
+  "players": [
+    
+  ],
+  "isGameStarted": true,
+  "currentRound": "LOBBY",
+  "currentEasyQuestion": -1,
+  "currentHardQuestion": -1,
+  "revealedClues": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "revealedAnswers": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "showSpeedUpAnswers": false,
+  "activePlayerId": "1759170117895-0.5256387759662485",
+  "finishQuestionType": "20p"
+}

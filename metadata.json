@@ -1,0 +1,5 @@
+{
+  "name": "Olympia Game Show",
+  "description": "A mock website of the TV show 'Đường lên đỉnh Olympia' built with React, TypeScript, and a mock Socket.IO backend. It features an admin dashboard for game control, a player interface for participation, and a public screen for viewing.",
+  "requestFramePermissions": []
+}
