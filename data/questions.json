@@ -253,7 +253,6 @@
     }
   ],
   "ChuongNgaiVat": {
-    "img": "https://th.bing.com/th/id/R.2ac1b0f4d6af9c577b69101bfe727cbd?rik=Qc%2fP2qYcQ2%2b8vw&riu=http%3a%2f%2fstatic.cand.com.vn%2fFiles%2fImage%2fthuthuy%2f2021%2f02%2f01%2fthumb_660_d0db38ab-e08c-4711-981e-380ca3889561.jpg&ehk=vVdUKN6Z6r9udnjNBU2ZQ%2fPQ9qXS4WnBLfaiNXuapEY%3d&risl=&pid=ImgRaw&r=0",
     "keyword": "AN TOÀN THÔNG TIN",
     "clues": [
       {
@@ -266,15 +265,15 @@
       },
       {
         "question": "Kỹ thuật tạo ra một chuỗi giá trị cố định đại diện duy nhất cho dữ liệu, đảm bảo phát hiện mọi thay đổi.",
-        "answer": "Hàm băm"
+        "answer": "Hash"
       },
       {
         "question": "Loại chữ ký được pháp luật Việt Nam công nhận, giúp xác thực danh tính và đảm bảo tính toàn vẹn dữ liệu.",
-        "answer": "Chữ ký số"
+        "answer": "Digital Signature"
       },
       {
         "question": "Phương thức xác thực hiện đại, yêu cầu ít nhất hai lớp bảo mật như mật khẩu + OTP hoặc vân tay.",
-        "answer": "MFA (Multi-Factor Authentication)"
+        "answer": "MFA"
       },
       {
         "question": "Hình thức tấn công mạng phổ biến, kẻ xấu giả mạo email, website để đánh cắp thông tin cá nhân.",
@@ -282,7 +281,7 @@
       },
       {
         "question": "Hệ thống bảo vệ mạng nội bộ khỏi truy cập trái phép, được ví như “bức tường” chắn tin tặc.",
-        "answer": "Tường lửa"
+        "answer": "Firewall"
       },
       {
         "question": "Loại phần mềm độc hại có thể lây lan qua email, cửa sổ chat, gây nguy hiểm cho hệ thống TMĐT.",
