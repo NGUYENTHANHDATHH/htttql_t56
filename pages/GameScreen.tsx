@@ -103,16 +103,16 @@ const RoundDisplay: React.FC<{
     if (video) {
       return (
         <div className="relative w-full max-w-4xl aspect-video overflow-hidden">
-    <video
-        src={video.src}
-        title={video.title}
-        className="absolute top-1/2 left-1/2 min-w-full min-h-full -translate-x-1/2 -translate-y-1/2"
-        frameBorder="0"
-        allow="autoplay; encrypted-media; fullscreen"
-        allowFullScreen
-        controls
-    />
-</div>
+          <video
+            src={video.src}
+            title={video.title}
+            className="absolute top-1/2 left-1/2 min-w-full min-h-full -translate-x-1/2 -translate-y-1/2"
+            frameBorder="0"
+            allow="autoplay; encrypted-media; fullscreen"
+            allowFullScreen
+            controls
+          />
+        </div>
       );
     }
     return null;
@@ -141,14 +141,14 @@ const RoundDisplay: React.FC<{
         <div>
           <p className="text-3xl bg-gray-700 p-6 rounded-lg">{question.question}</p>
           {question.options && question.options.length > 0 ? (
-          <div className="space-y-3 mt-4">
-            {question.options.map((option, index) => (
-              <p key={index} className="text-xl pl-4 py-2 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors duration-200">
-                {option}
-              </p>
-            ))}
-          </div>
-        ) : null}
+            <div className="space-y-3 mt-4">
+              {question.options.map((option, index) => (
+                <p key={index} className="text-xl pl-4 py-2 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors duration-200">
+                  {option}
+                </p>
+              ))}
+            </div>
+          ) : null}
         </div>
       );
     }
@@ -158,12 +158,12 @@ const RoundDisplay: React.FC<{
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-4 uppercase">Từ khóa cần tìm gồm 4 chữ</h2>
           <div className="relative mb-4">
-    <img src={"/assets/imgs/obstacle.png"} alt="Obstacle" className="w-full max-w-2xl mx-auto rounded-lg shadow-lg" />
-    {/* 2x2 numbered black boxes overlay; hide each when its clue is revealed */}
-    <div className="absolute inset-0 w-full h-full flex items-center justify-center pointer-events-none">
-        <div className="w-full max-w-2xl h-full grid grid-cols-4 grid-rows-2"> {/* Đảm bảo grid này bao phủ hoàn hảo ảnh */}
-            {data.clues.slice(0, 8).map((_, i) => (
-                <div
+            <img src={"/assets/imgs/obstacle.png"} alt="Obstacle" className="w-full max-w-2xl mx-auto rounded-lg shadow-lg" />
+            {/* 2x2 numbered black boxes overlay; hide each when its clue is revealed */}
+            <div className="absolute inset-0 w-full h-full flex items-center justify-center pointer-events-none">
+              <div className="w-full max-w-2xl h-full grid grid-cols-4 grid-rows-2"> {/* Đảm bảo grid này bao phủ hoàn hảo ảnh */}
+                {data.clues.slice(0, 8).map((_, i) => (
+                  <div
                     key={i}
                     className={`
                         flex items-center justify-center
@@ -171,13 +171,13 @@ const RoundDisplay: React.FC<{
                         transition-opacity duration-300 ease-in-out
                         ${gameState.revealedAnswers[i] ? 'opacity-0' : 'opacity-100'}
                     `}
-                >
+                  >
                     {i + 1}
-                </div>
-            ))}
-        </div>
-    </div>
-</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
             {data.clues.map((clue, index) => (
               <div key={index} className={`p-4 rounded-lg transition-colors duration-300 ${gameState.revealedClues[index] ? 'bg-blue-800' : 'bg-gray-700'}`}>
@@ -223,7 +223,7 @@ const RoundDisplay: React.FC<{
           <h3 className="text-2xl font-bold mb-4">Player: <span className="text-yellow-400">{activePlayer.name}</span></h3>
           <p className="text-3xl bg-gray-700 p-6 rounded-lg">
             <span className={`font-bold ${gameState.finishQuestionType === 'easy' ? 'text-green-400' : 'text-red-400'}`}>
-              
+
             </span>
             {" "}{question.question}
           </p>
@@ -328,7 +328,7 @@ const GameScreen: React.FC<GameScreenProps> = ({ isPlayerView }) => {
                 <i className="fas fa-bell mr-2"></i>BẤM CHUÔNG
               </button>
             )}
-            {currentRound === Round.SPEED_UP && !gameState.showSpeedUpAnswers && (
+            {(currentRound === Round.SPEED_UP || currentRound === Round.OBSTACLE) && !gameState.showSpeedUpAnswers && (
               <div className="w-full max-w-xl flex gap-2">
                 <input
                   type="text"
@@ -346,6 +346,7 @@ const GameScreen: React.FC<GameScreenProps> = ({ isPlayerView }) => {
                 </button>
               </div>
             )}
+
           </div>
         )}
       </main>

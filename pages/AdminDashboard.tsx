@@ -43,7 +43,7 @@ const AdminDashboard: React.FC = () => {
     <div className="bg-gray-700 p-3 rounded-lg flex flex-col md:flex-row items-center justify-between space-y-2 md:space-y-0 md:space-x-2">
       <span className="font-bold w-full md:w-1/4">{player.name} ({player.score})</span>
       <div className="flex items-center space-x-2">
-      <button onClick={() => handleScoreChange(player.id, 5)} className="bg-green-500 px-2 py-1 rounded hover:bg-green-400 text-sm">+5</button>
+        <button onClick={() => handleScoreChange(player.id, 5)} className="bg-green-500 px-2 py-1 rounded hover:bg-green-400 text-sm">+5</button>
 
         <button onClick={() => handleScoreChange(player.id, 10)} className="bg-green-500 px-2 py-1 rounded hover:bg-green-400 text-sm">+10</button>
         <button onClick={() => handleScoreChange(player.id, 20)} className="bg-green-500 px-2 py-1 rounded hover:bg-green-400 text-sm">+20</button>
@@ -79,10 +79,11 @@ const AdminDashboard: React.FC = () => {
               {gameState.isGameStarted && <button onClick={handleEndGame} className="bg-red-600 hover:bg-red-500 px-4 py-2 rounded-md font-semibold">End Game & Reset</button>}
               <button onClick={() => socket.resetBuzzer()} className="bg-yellow-600 hover:bg-yellow-500 px-4 py-2 rounded-md font-semibold">Reset Buzzer</button>
               {gameState.currentRound === Round.SPEED_UP && <button onClick={() => socket.revealAnswers()} className="bg-purple-600 hover:bg-purple-500 px-4 py-2 rounded-md font-semibold">Reveal Answers</button>}
+              {gameState.currentRound === Round.OBSTACLE && <button onClick={() => socket.revealAnswers()} className="bg-purple-600 hover:bg-purple-500 px-4 py-2 rounded-md font-semibold">Reveal Answers</button>}
               <button onClick={() => socket.playSound('correct.mp3')} className="bg-green-600 hover:bg-yellow-500 px-4 py-2 rounded-md font-semibold">Correct</button>
               <button onClick={() => socket.playSound('incorrect.mp3')} className="bg-red-600 hover:bg-yellow-500 px-4 py-2 rounded-md font-semibold">Incorrect</button>
               <button onClick={() => socket.playSound('congratulation.mp3')} className="bg-yellow-600 hover:bg-yellow-500 px-4 py-2 rounded-md font-semibold">Congratulation</button>
-            
+
             </div>
           </div>
 
@@ -99,10 +100,10 @@ const AdminDashboard: React.FC = () => {
           <div className="bg-gray-700 p-4 rounded-lg shadow-lg">
             <h2 className="text-xl font-bold mb-3 border-b border-gray-600 pb-2">Timer Controls</h2>
             <div className="flex flex-wrap gap-2">
-            <button key={5} onClick={() => { socket.startTimer(5); socket.playSound('countdown_5s.mp3'); }} className="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md font-semibold">5s</button>
-            <button key={15} onClick={() => { socket.startTimer(15); socket.playSound('countdown_15s.mp3'); }} className="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md font-semibold">15s</button>
-            <button key={15} onClick={() => { socket.startTimer(15); socket.playSound('countdown_20s.mp3'); }} className="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md font-semibold">20s</button>
-            <button key={120} onClick={() => { socket.startTimer(120); socket.playSound('countdown_120s.mp3'); }} className="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md font-semibold">120s</button>
+              <button key={5} onClick={() => { socket.startTimer(5); socket.playSound('countdown_5s.mp3'); }} className="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md font-semibold">5s</button>
+              <button key={15} onClick={() => { socket.startTimer(15); socket.playSound('countdown_15s.mp3'); }} className="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md font-semibold">15s</button>
+              <button key={15} onClick={() => { socket.startTimer(15); socket.playSound('countdown_20s.mp3'); }} className="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md font-semibold">20s</button>
+              <button key={120} onClick={() => { socket.startTimer(120); socket.playSound('countdown_120s.mp3'); }} className="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md font-semibold">120s</button>
             </div>
             <p className="mt-4 text-2xl font-mono">Time Left: {gameState.timer}s</p>
           </div>
@@ -139,11 +140,11 @@ const AdminDashboard: React.FC = () => {
                     </button>
                   </div>
                   <div className="space-y-2">
-                    {[0, 1, 2, 3,4,5,6,7].map(i => (
+                    {[0, 1, 2, 3, 4, 5, 6, 7].map(i => (
                       <div key={i} className="flex gap-2 items-center">
                         <span className="font-bold w-16">Clue {i + 1}:</span>
                         <button
-                          onClick={() => {socket.revealClue(i); socket.playSound('show_question.mp3');}}
+                          onClick={() => { socket.revealClue(i); socket.playSound('show_question.mp3'); }}
                           disabled={gameState.revealedClues[i]}
                           className="bg-cyan-600 hover:bg-cyan-500 px-3 py-1 rounded-md font-semibold disabled:bg-gray-500"
                         >
