@@ -52,6 +52,9 @@ const PlayerCard: React.FC<{
       {currentRound === Round.SPEED_UP && showSpeedUpAnswers && (
         <p className="text-sm mt-1 bg-gray-700 p-2 rounded">Answer: {player.speedUpAnswer || ''}</p>
       )}
+      {currentRound === Round.OBSTACLE && player.obstacleAnswer && (
+        <p className="text-sm mt-1 bg-gray-700 p-2 rounded">Answer: {player.obstacleAnswer}</p>
+      )}
     </div>
   );
 });
@@ -241,6 +244,7 @@ const GameScreen: React.FC<GameScreenProps> = ({ isPlayerView }) => {
   const navigate = useNavigate();
   const [currentPlayer, setCurrentPlayer] = useState<Player | null>(null);
   const [speedUpAnswer, setSpeedUpAnswer] = useState('');
+  const [obstacleAnswer, setObstacleAnswer] = useState('');
 
   useEffect(() => {
     if (isPlayerView) {
@@ -272,6 +276,23 @@ const GameScreen: React.FC<GameScreenProps> = ({ isPlayerView }) => {
     }
   }, [gameState?.currentEasyQuestion, gameState?.currentRound]);
 
+  // Clear local obstacle answer input when the Obstacle round changes or when obstacle answers are cleared
+  useEffect(() => {
+    if (gameState?.currentRound === Round.OBSTACLE) {
+      setObstacleAnswer('');
+    }
+  }, [gameState?.currentRound]);
+
+  // Clear local obstacle answer input when server clears obstacle answers (showObstacle called)
+  useEffect(() => {
+    if (gameState?.currentRound === Round.OBSTACLE && currentPlayer) {
+      const playerInState = gameState.players.find(p => p.id === currentPlayer.id);
+      if (playerInState && !playerInState.obstacleAnswer) {
+        setObstacleAnswer('');
+      }
+    }
+  }, [gameState?.players, currentPlayer, gameState?.currentRound]);
+
   if (!gameState || !questions) {
     return <div className="flex items-center justify-center min-h-screen text-2xl">Connecting to the game...</div>;
   }
@@ -293,7 +314,11 @@ const GameScreen: React.FC<GameScreenProps> = ({ isPlayerView }) => {
   const handleSubmitAnswer = () => {
     if (currentPlayer) {
       try {
-        socket.submitSpeedUpAnswer(currentPlayer.id, speedUpAnswer);
+        if (currentRound === Round.SPEED_UP) {
+          socket.submitSpeedUpAnswer(currentPlayer.id, speedUpAnswer);
+        } else if (currentRound === Round.OBSTACLE) {
+          socket.submitObstacleAnswer(currentPlayer.id, obstacleAnswer);
+        }
         // Don't clear answer here, let it be controlled by server state if needed
         // setSpeedUpAnswer(''); 
       } catch (error) {
@@ -328,12 +353,12 @@ const GameScreen: React.FC<GameScreenProps> = ({ isPlayerView }) => {
                 <i className="fas fa-bell mr-2"></i>BẤM CHUÔNG
               </button>
             )}
-            {(currentRound === Round.SPEED_UP || currentRound === Round.OBSTACLE) && !gameState.showSpeedUpAnswers && (
+            {(currentRound === Round.OBSTACLE) && gameState.currentEasyQuestion >= 0 && (
               <div className="w-full max-w-xl flex gap-2">
                 <input
                   type="text"
-                  value={speedUpAnswer}
-                  onChange={(e) => setSpeedUpAnswer(e.target.value)}
+                  value={obstacleAnswer}
+                  onChange={(e) => setObstacleAnswer(e.target.value)}
                   onKeyUp={(e) => e.key === 'Enter' && handleSubmitAnswer()}
                   placeholder="Type your answer and press Enter"
                   className="flex-grow bg-gray-700 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"

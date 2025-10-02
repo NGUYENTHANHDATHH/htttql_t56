@@ -13,6 +13,7 @@ export interface Player {
   score: number;
   hasStarOfHope?: boolean;
   speedUpAnswer?: string;
+  obstacleAnswer?: string;
 }
 
 export interface GameState {

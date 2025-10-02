@@ -156,6 +156,16 @@ io.on('connection', (socket) => {
     } catch (e) { console.error('submitSpeedUpAnswer Error:', e); }
   });
 
+  socket.on('submitObstacleAnswer', ({ playerId, answer }) => {
+    try {
+      const player = gameState.players.find(p => p.id === playerId);
+      if (player) {
+        player.obstacleAnswer = answer;
+        broadcastState();
+      }
+    } catch (e) { console.error('submitObstacleAnswer Error:', e); }
+  });
+
   socket.on('toggleStarOfHope', ({ playerId }) => {
     try {
       const player = gameState.players.find(p => p.id === playerId);
@@ -215,6 +225,7 @@ io.on('connection', (socket) => {
 
       gameState.players.forEach(p => {
         p.speedUpAnswer = '';
+        p.obstacleAnswer = '';
         p.hasStarOfHope = false;
       });
       if (timerInterval) clearInterval(timerInterval);
@@ -321,6 +332,10 @@ io.on('connection', (socket) => {
     try {
       if (gameState.currentRound === ROUNDS.OBSTACLE) {
         gameState.currentEasyQuestion = 0; // Move from intro (-1) to main content (0)
+        // Clear all obstacle answers when showing obstacle (new clue set)
+        gameState.players.forEach(p => {
+          p.obstacleAnswer = '';
+        });
         broadcastState();
       }
     } catch (e) { console.error('showObstacle Error:', e); }

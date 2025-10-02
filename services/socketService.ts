@@ -50,6 +50,10 @@ class SocketService {
     this.socket.emit('submitSpeedUpAnswer', { playerId, answer });
   }
 
+  submitObstacleAnswer(playerId: string, answer: string) {
+    this.socket.emit('submitObstacleAnswer', { playerId, answer });
+  }
+
   toggleStarOfHope(playerId: string) {
     this.socket.emit('toggleStarOfHope', { playerId });
   }
