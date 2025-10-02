@@ -65,6 +65,7 @@ const defaultState = {
   revealedClues: [false, false, false, false],
   revealedAnswers: [false, false, false, false],
   showSpeedUpAnswers: false,
+  showPlayerAnswers: false,
   finishQuestionType: '20p',
 };
 
@@ -102,6 +103,7 @@ function saveState() {
       revealedClues: gameState.revealedClues,
       revealedAnswers: gameState.revealedAnswers,
       showSpeedUpAnswers: gameState.showSpeedUpAnswers,
+      showPlayerAnswers: gameState.showPlayerAnswers,
       activePlayerId: gameState.activePlayerId,
       finishQuestionType: gameState.finishQuestionType,
     };
@@ -218,6 +220,7 @@ io.on('connection', (socket) => {
       gameState.revealedClues = [false, false, false, false];
       gameState.revealedAnswers = [false, false, false, false];
       gameState.showSpeedUpAnswers = false;
+      gameState.showPlayerAnswers = false;
 
       // Reset question indices to -1 to show intro screen on the frontend
       gameState.currentEasyQuestion = -1;
@@ -326,6 +329,20 @@ io.on('connection', (socket) => {
       gameState.showSpeedUpAnswers = true;
       broadcastState();
     } catch (e) { console.error('revealAnswers Error:', e); }
+  });
+
+  socket.on('showPlayerAnswers', () => {
+    try {
+      gameState.showPlayerAnswers = true;
+      broadcastState();
+    } catch (e) { console.error('showPlayerAnswers Error:', e); }
+  });
+
+  socket.on('hidePlayerAnswers', () => {
+    try {
+      gameState.showPlayerAnswers = false;
+      broadcastState();
+    } catch (e) { console.error('hidePlayerAnswers Error:', e); }
   });
 
   socket.on('showObstacle', () => {

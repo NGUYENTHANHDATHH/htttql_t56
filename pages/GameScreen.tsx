@@ -41,8 +41,9 @@ const PlayerCard: React.FC<{
   isBuzzerWinner: boolean,
   isActivePlayer: boolean,
   currentRound: Round,
-  showSpeedUpAnswers: boolean
-}> = React.memo(({ player, isBuzzerWinner, isActivePlayer, currentRound, showSpeedUpAnswers }) => {
+  showSpeedUpAnswers: boolean,
+  showPlayerAnswers: boolean
+}> = React.memo(({ player, isBuzzerWinner, isActivePlayer, currentRound, showSpeedUpAnswers, showPlayerAnswers }) => {
   return (
     <div className={`p-3 rounded-lg transition-all duration-300 ${isBuzzerWinner ? 'bg-yellow-500 text-black scale-105 shadow-lg' : 'bg-gray-800 bg-opacity-40'} ${isActivePlayer ? 'border-2 border-red-300' : 'border-2 border-yellow-200 shadow-[0_0_15px_rgba(255,255,0,0.6)] bg-black bg-opacity-50'}`}>
       <div className="flex justify-between items-center">
@@ -52,7 +53,7 @@ const PlayerCard: React.FC<{
       {currentRound === Round.SPEED_UP && showSpeedUpAnswers && (
         <p className="text-sm mt-1 bg-gray-700 p-2 rounded">Answer: {player.speedUpAnswer || ''}</p>
       )}
-      {currentRound === Round.OBSTACLE && player.obstacleAnswer && (
+      {currentRound === Round.OBSTACLE && showPlayerAnswers && player.obstacleAnswer && (
         <p className="text-sm mt-1 bg-gray-700 p-2 rounded">Answer: {player.obstacleAnswer}</p>
       )}
     </div>
@@ -392,6 +393,7 @@ const GameScreen: React.FC<GameScreenProps> = ({ isPlayerView }) => {
                 isActivePlayer={isActivePlayer}
                 currentRound={currentRound}
                 showSpeedUpAnswers={gameState.showSpeedUpAnswers}
+                showPlayerAnswers={gameState.showPlayerAnswers}
               />
             })}
           </div>

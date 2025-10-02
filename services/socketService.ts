@@ -69,6 +69,8 @@ class SocketService {
   revealClue(index: number) { this.socket.emit('revealClue', { index }); }
   revealAnswer(index: number) { this.socket.emit('revealAnswer', { index }); }
   revealAnswers() { this.socket.emit('revealAnswers'); }
+  showPlayerAnswers() { this.socket.emit('showPlayerAnswers'); }
+  hidePlayerAnswers() { this.socket.emit('hidePlayerAnswers'); }
   showObstacle() { this.socket.emit('showObstacle'); }
   hideObstacle() { this.socket.emit('hideObstacle'); }
   updateScore(playerId: string, delta: number) { this.socket.emit('updateScore', { playerId, delta }); }

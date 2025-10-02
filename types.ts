@@ -35,6 +35,9 @@ export interface GameState {
   // Speed Up round state
   showSpeedUpAnswers: boolean;
 
+  // Obstacle round state
+  showPlayerAnswers: boolean;
+
   // Finish round state
   finishQuestionType: '20đ' | '30đ';
 }

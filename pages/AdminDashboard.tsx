@@ -78,7 +78,11 @@ const AdminDashboard: React.FC = () => {
               {!gameState.isGameStarted && <button onClick={() => socket.startGame()} className="bg-green-600 hover:bg-green-500 px-4 py-2 rounded-md font-semibold">Start Game</button>}
               {gameState.isGameStarted && <button onClick={handleEndGame} className="bg-red-600 hover:bg-red-500 px-4 py-2 rounded-md font-semibold">End Game & Reset</button>}
               <button onClick={() => socket.resetBuzzer()} className="bg-yellow-600 hover:bg-yellow-500 px-4 py-2 rounded-md font-semibold">Reset Buzzer</button>
-              {gameState.currentRound === Round.OBSTACLE && <button onClick={() => socket.revealAnswers()} className="bg-purple-600 hover:bg-purple-500 px-4 py-2 rounded-md font-semibold">Reveal Answers</button>}
+              {gameState.currentRound === Round.OBSTACLE && (
+                gameState.showPlayerAnswers ? 
+                  <button onClick={() => socket.hidePlayerAnswers()} className="bg-purple-600 hover:bg-purple-500 px-4 py-2 rounded-md font-semibold">Hide Player Answers</button> :
+                  <button onClick={() => socket.showPlayerAnswers()} className="bg-purple-600 hover:bg-purple-500 px-4 py-2 rounded-md font-semibold">Show Player Answers</button>
+              )}
               <button onClick={() => socket.playSound('correct.mp3')} className="bg-green-600 hover:bg-yellow-500 px-4 py-2 rounded-md font-semibold">Correct</button>
               <button onClick={() => socket.playSound('incorrect.mp3')} className="bg-red-600 hover:bg-yellow-500 px-4 py-2 rounded-md font-semibold">Incorrect</button>
               <button onClick={() => socket.playSound('congratulation.mp3')} className="bg-yellow-600 hover:bg-yellow-500 px-4 py-2 rounded-md font-semibold">Congratulation</button>
