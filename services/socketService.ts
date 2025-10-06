@@ -47,11 +47,13 @@ class SocketService {
   }
 
   submitSpeedUpAnswer(playerId: string, answer: string) {
-    this.socket.emit('submitSpeedUpAnswer', { playerId, answer });
+    const submittedAt = new Date().toISOString();
+    this.socket.emit('submitSpeedUpAnswer', { playerId, answer, submittedAt });
   }
 
   submitObstacleAnswer(playerId: string, answer: string) {
-    this.socket.emit('submitObstacleAnswer', { playerId, answer });
+    const submittedAt = new Date().toISOString();
+    this.socket.emit('submitObstacleAnswer', { playerId, answer, submittedAt });
   }
 
   toggleStarOfHope(playerId: string) {

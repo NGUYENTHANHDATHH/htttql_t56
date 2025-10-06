@@ -83,6 +83,11 @@ const AdminDashboard: React.FC = () => {
                   <button onClick={() => socket.hidePlayerAnswers()} className="bg-purple-600 hover:bg-purple-500 px-4 py-2 rounded-md font-semibold">Hide Player Answers</button> :
                   <button onClick={() => socket.showPlayerAnswers()} className="bg-purple-600 hover:bg-purple-500 px-4 py-2 rounded-md font-semibold">Show Player Answers</button>
               )}
+              {gameState.currentRound === Round.SPEED_UP && (
+                gameState.showSpeedUpAnswers ?
+                  <button disabled className="bg-gray-600 px-4 py-2 rounded-md font-semibold cursor-not-allowed">Speed Up Answers Shown</button> :
+                  <button onClick={() => socket.revealAnswers()} className="bg-purple-600 hover:bg-purple-500 px-4 py-2 rounded-md font-semibold">Show Speed Up Answers</button>
+              )}
               <button onClick={() => socket.playSound('correct.mp3')} className="bg-green-600 hover:bg-yellow-500 px-4 py-2 rounded-md font-semibold">Correct</button>
               <button onClick={() => socket.playSound('incorrect.mp3')} className="bg-red-600 hover:bg-yellow-500 px-4 py-2 rounded-md font-semibold">Incorrect</button>
               <button onClick={() => socket.playSound('congratulation.mp3')} className="bg-yellow-600 hover:bg-yellow-500 px-4 py-2 rounded-md font-semibold">Congratulation</button>

@@ -148,21 +148,25 @@ io.on('connection', (socket) => {
     } catch (e) { console.error('buzz Error:', e); }
   });
 
-  socket.on('submitSpeedUpAnswer', ({ playerId, answer }) => {
+  socket.on('submitSpeedUpAnswer', ({ playerId, answer, submittedAt }) => {
     try {
       const player = gameState.players.find(p => p.id === playerId);
       if (player) {
         player.speedUpAnswer = answer;
+        // store ISO timestamp of submission for auditing/sorting
+        player.speedUpAnswerAt = submittedAt || new Date().toISOString();
         broadcastState();
       }
     } catch (e) { console.error('submitSpeedUpAnswer Error:', e); }
   });
 
-  socket.on('submitObstacleAnswer', ({ playerId, answer }) => {
+  socket.on('submitObstacleAnswer', ({ playerId, answer, submittedAt }) => {
     try {
       const player = gameState.players.find(p => p.id === playerId);
       if (player) {
         player.obstacleAnswer = answer;
+        // store ISO timestamp of submission for auditing/sorting
+        player.obstacleAnswerAt = submittedAt || new Date().toISOString();
         broadcastState();
       }
     } catch (e) { console.error('submitObstacleAnswer Error:', e); }
@@ -228,7 +232,9 @@ io.on('connection', (socket) => {
 
       gameState.players.forEach(p => {
         p.speedUpAnswer = '';
+        p.speedUpAnswerAt = undefined;
         p.obstacleAnswer = '';
+        p.obstacleAnswerAt = undefined;
         p.hasStarOfHope = false;
       });
       if (timerInterval) clearInterval(timerInterval);

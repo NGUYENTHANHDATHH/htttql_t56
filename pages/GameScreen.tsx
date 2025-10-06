@@ -48,16 +48,19 @@ const PlayerCard: React.FC<{
     if (!iso) return '';
     try {
       const date = new Date(iso);
-      return new Intl.DateTimeFormat('vi-VN', {
+      const formatted = new Intl.DateTimeFormat('vi-VN', {
         timeZone: 'Asia/Ho_Chi_Minh',
         hour12: false,
-        year: 'numeric',
-        month: '2-digit',
-        day: '2-digit',
+       
         hour: '2-digit',
         minute: '2-digit',
-        second: '2-digit'
+        second: '2-digit',
       }).format(date);
+  
+      // Lấy mili-giây và pad cho đủ 3 chữ số
+      const ms = String(date.getMilliseconds()).padStart(3, '0');
+  
+      return `${formatted},${ms}`;
     } catch {
       return '';
     }
@@ -69,10 +72,10 @@ const PlayerCard: React.FC<{
         <span className="font-bold text-2xl">{player.score}</span>
       </div>
       {currentRound === Round.SPEED_UP && showSpeedUpAnswers && (
-        <p className="text-sm mt-1 bg-gray-700 p-2 rounded">Answer: {player.speedUpAnswer || ''}{player.speedUpAnswerAt ? ` — ${formatVNTime(player.speedUpAnswerAt)}` : ''}</p>
+        <p className="text-lg mt-1 bg-gray-700 p-2 rounded">Answer: {player.speedUpAnswer || ''}{player.speedUpAnswerAt ? ` — ${formatVNTime(player.speedUpAnswerAt)}` : ''}</p>
       )}
       {currentRound === Round.OBSTACLE && showPlayerAnswers && player.obstacleAnswer && (
-        <p className="text-sm mt-1 bg-gray-700 p-2 rounded">Answer: {player.obstacleAnswer}{player.obstacleAnswerAt ? ` — ${formatVNTime(player.obstacleAnswerAt)}` : ''}</p>
+        <p className="text-lg mt-1 bg-gray-700 p-2 rounded">Answer: {player.obstacleAnswer}{player.obstacleAnswerAt ? ` — ${formatVNTime(player.obstacleAnswerAt)}` : ''}</p>
       )}
     </div>
   );
@@ -372,12 +375,12 @@ const GameScreen: React.FC<GameScreenProps> = ({ isPlayerView }) => {
                 <i className="fas fa-bell mr-2"></i>BẤM CHUÔNG
               </button>
             )}
-            {(currentRound === Round.OBSTACLE) && gameState.currentEasyQuestion >= 0 && (
+            {(currentRound === Round.OBSTACLE || currentRound === Round.SPEED_UP) && gameState.currentEasyQuestion >= 0 && (
               <div className="w-full max-w-xl flex gap-2">
                 <input
                   type="text"
-                  value={obstacleAnswer}
-                  onChange={(e) => setObstacleAnswer(e.target.value)}
+                  value={currentRound === Round.OBSTACLE ? obstacleAnswer : speedUpAnswer}
+                  onChange={(e) => currentRound === Round.OBSTACLE ? setObstacleAnswer(e.target.value) : setSpeedUpAnswer(e.target.value)}
                   onKeyUp={(e) => e.key === 'Enter' && handleSubmitAnswer()}
                   placeholder="Type your answer and press Enter"
                   className="flex-grow bg-gray-700 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"

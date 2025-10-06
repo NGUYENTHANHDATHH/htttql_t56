@@ -69,6 +69,16 @@ export const GameProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             obstacleAnswerAt = p.obstacleAnswer ? new Date().toISOString() : undefined;
           }
 
+          // If admin just toggled showing answers ON, ensure existing answers have a timestamp
+          const justRevealedPlayerAnswers = state.showPlayerAnswers && !prevState.showPlayerAnswers;
+          if (justRevealedPlayerAnswers && p.obstacleAnswer && !obstacleAnswerAt) {
+            obstacleAnswerAt = new Date().toISOString();
+          }
+          const justRevealedSpeedUpAnswers = state.showSpeedUpAnswers && !prevState.showSpeedUpAnswers;
+          if (justRevealedSpeedUpAnswers && p.speedUpAnswer && !speedUpAnswerAt) {
+            speedUpAnswerAt = new Date().toISOString();
+          }
+
           return { ...p, speedUpAnswerAt, obstacleAnswerAt };
         });
 
