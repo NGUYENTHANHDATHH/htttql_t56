@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode, useRef } from 'react';
 import { socketService } from '../services/socketService';
-import { GameState, QuestionData } from '../types';
+import { GameState, QuestionData, Player } from '../types';
 
 interface GameContextType {
   gameState: GameState | null;
@@ -52,7 +52,28 @@ export const GameProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
   useEffect(() => {
     const handleStateUpdate = (state: GameState) => {
-      setGameState(state);
+      // Enrich state with local timestamps when answers change
+      setGameState(prevState => {
+        if (!prevState) return state;
+        const prevPlayersById: Map<string, Player> = new Map(prevState.players.map((p: Player) => [p.id, p]));
+        const playersWithTimestamps = state.players.map(p => {
+          const prev = prevPlayersById.get(p.id);
+          let speedUpAnswerAt = p.speedUpAnswerAt;
+          let obstacleAnswerAt = p.obstacleAnswerAt;
+
+          if (p.speedUpAnswer !== prev?.speedUpAnswer) {
+            // Set timestamp when a new answer is provided; clear when answer is cleared
+            speedUpAnswerAt = p.speedUpAnswer ? new Date().toISOString() : undefined;
+          }
+          if (p.obstacleAnswer !== prev?.obstacleAnswer) {
+            obstacleAnswerAt = p.obstacleAnswer ? new Date().toISOString() : undefined;
+          }
+
+          return { ...p, speedUpAnswerAt, obstacleAnswerAt };
+        });
+
+        return { ...state, players: playersWithTimestamps };
+      });
     };
 
     const handleInit = (data: { gameState: GameState, questions: QuestionData }) => {

@@ -44,6 +44,24 @@ const PlayerCard: React.FC<{
   showSpeedUpAnswers: boolean,
   showPlayerAnswers: boolean
 }> = React.memo(({ player, isBuzzerWinner, isActivePlayer, currentRound, showSpeedUpAnswers, showPlayerAnswers }) => {
+  const formatVNTime = (iso?: string) => {
+    if (!iso) return '';
+    try {
+      const date = new Date(iso);
+      return new Intl.DateTimeFormat('vi-VN', {
+        timeZone: 'Asia/Ho_Chi_Minh',
+        hour12: false,
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+      }).format(date);
+    } catch {
+      return '';
+    }
+  };
   return (
     <div className={`p-3 rounded-lg transition-all duration-300 ${isBuzzerWinner ? 'bg-yellow-500 text-black scale-105 shadow-lg' : 'bg-gray-800 bg-opacity-40'} ${isActivePlayer ? 'border-2 border-red-300' : 'border-2 border-yellow-200 shadow-[0_0_15px_rgba(255,255,0,0.6)] bg-black bg-opacity-50'}`}>
       <div className="flex justify-between items-center">
@@ -51,10 +69,10 @@ const PlayerCard: React.FC<{
         <span className="font-bold text-2xl">{player.score}</span>
       </div>
       {currentRound === Round.SPEED_UP && showSpeedUpAnswers && (
-        <p className="text-sm mt-1 bg-gray-700 p-2 rounded">Answer: {player.speedUpAnswer || ''}</p>
+        <p className="text-sm mt-1 bg-gray-700 p-2 rounded">Answer: {player.speedUpAnswer || ''}{player.speedUpAnswerAt ? ` — ${formatVNTime(player.speedUpAnswerAt)}` : ''}</p>
       )}
       {currentRound === Round.OBSTACLE && showPlayerAnswers && player.obstacleAnswer && (
-        <p className="text-sm mt-1 bg-gray-700 p-2 rounded">Answer: {player.obstacleAnswer}</p>
+        <p className="text-sm mt-1 bg-gray-700 p-2 rounded">Answer: {player.obstacleAnswer}{player.obstacleAnswerAt ? ` — ${formatVNTime(player.obstacleAnswerAt)}` : ''}</p>
       )}
     </div>
   );

@@ -13,7 +13,11 @@ export interface Player {
   score: number;
   hasStarOfHope?: boolean;
   speedUpAnswer?: string;
+  // ISO timestamp when player submitted Speed Up answer
+  speedUpAnswerAt?: string;
   obstacleAnswer?: string;
+  // ISO timestamp when player submitted Obstacle answer
+  obstacleAnswerAt?: string;
 }
 
 export interface GameState {
