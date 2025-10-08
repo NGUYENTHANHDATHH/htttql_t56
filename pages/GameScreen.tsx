@@ -51,15 +51,15 @@ const PlayerCard: React.FC<{
       const formatted = new Intl.DateTimeFormat('vi-VN', {
         timeZone: 'Asia/Ho_Chi_Minh',
         hour12: false,
-       
+
         hour: '2-digit',
         minute: '2-digit',
         second: '2-digit',
       }).format(date);
-  
+
       // Lấy mili-giây và pad cho đủ 3 chữ số
       const ms = String(date.getMilliseconds()).padStart(3, '0');
-  
+
       return `${formatted},${ms}`;
     } catch {
       return '';
@@ -226,9 +226,10 @@ const RoundDisplay: React.FC<{
       return (
         <div className="w-full max-w-4xl text-center">
           <h2 className="text-4xl font-bold mb-4">Speed Up!</h2>
-          <div className="relative w-full" style={{ paddingBottom: '56.25%' /* 16:9 Aspect Ratio */ }}>
-            <VideoFrame key={video.video} src={video.video} />
-          </div>
+          <p>Nhập đáp án phía dưới</p>
+          <p>|</p>
+          <p>|</p>
+          <p>V</p>
         </div>
       );
     }
@@ -334,6 +335,7 @@ const GameScreen: React.FC<GameScreenProps> = ({ isPlayerView }) => {
   };
 
   const handleSubmitAnswer = () => {
+    alert("Gửi đáp án thành công!");
     if (currentPlayer) {
       try {
         if (currentRound === Round.SPEED_UP) {
